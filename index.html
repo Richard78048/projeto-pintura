@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="global.css">
+    <script src="funcoes.js" type="text/javascript"></script>
+    <title>Orçamento Pintor</title>
+</head>
+<body>
+    <main>
+        <section class="gradient-page">
+            <form method="POST" action="#" class="form-pintura">
+				<h2> Bem Vindo Ao sistema de Orçamento de pintura para reformas!</h2>
+				<label> Informe seu nome:</label>
+					<input id="" type="text" name="nome" placeholder="Nome Completo" required>
+				<br>
+				<label> Informe seu CPF:</label>
+					<input id="" type="number" pattern="[0-9]+$" maxlength="11" name="" placeholder="Somente números" required>
+				<br>
+                <hr>
+                <button onclick="alterapadroes()">Alterar Padrões</button>
+                <div class="valores_padroes" id="valores_padroes">
+                    <h2>Valores Padrões:</h2>
+                    <form method="POST" action="#">
+                        <label class="padroes">Selador Area Externa: </label>
+                            <label> Valor:<input type="text" name="" placeholder="" width="10px"></label>
+                            <label> Cobertura:<input type="text" name="" placeholder=""></label>
+                            <label> Capacidade:<input type="text" name="" placeholder=""></label>
+                            <label class="padroes">Tinta Externa</label>
+                            <input type="text" name="" placeholder="">
+                            <label class="padroes">Tinta Metal</label>
+                            <input type="text" name="" placeholder="">
+                            <label class="padroes">Tinta Madeira</label>
+                            <input type="text" name="" placeholder="">
+                            <label class="padroes">Mão de Obra(frelancer Get Ninjas)</label>
+                            <input type="text" name="" placeholder="">
+                            <label class="padroes">Selador</label>
+                            <input type="text" name="" placeholder="">     
+                            <label class="padroes">Selador</label>
+                            <input type="text" name="" placeholder="">
+                            <label class="padroes">Selador</label>
+                            <input type="text" name="" placeholder="">
+                                                    
+                                
+                        <button name="alterar_padroes">Alterar</button>
+                    </form>
+                    <hr>
+                </div>    
+				
+				<h4>Materiais:</h4>
+				<hr>
+				<p>
+					<label for=""> Pintura Externa:</label>
+					<input type="checkbox" name="area_externa_ativa" id="area_externa_ativa" onclick="areaexterna()">
+				</p>	
+					<div id="area_externa">
+						<input type="text" name="area_externa" id="input_area_externa" placeholder="informe a Àrea em m²:"> 
+						<p>
+							<label for="estado_externo">Pintado</label>
+								<input type="radio" id="area_externa_radio" name="estado_externo" value="claro">
+							<label for="pintado">Pintado Cor escura</label>
+								<input type="radio" id="" name="estado_externo" value="escuro">
+							<label for="cru">Crua</label>
+								<input type="radio" id="" name="estado_externo" value="cru">
+						</p>
+					</div>		
+            <br>
+			<p>
+				<label for=""> Quantidade Portões:</label>
+				<input type="checkbox" name="exitem_portoes" id="existem_portoes" onclick="portoes()">
+            </p>
+			<div id="estado_portoes">
+				<input id="quantidade_portoes" type="number" name="quantidade_portoes" placeholder="informe a quantidade :">
+				<p>              
+					<label for="portao_pintado">Pintado</label>
+					<input type="radio" id="portao_pintado" name="portao_pintado" value="pintado">
+					<label for="pintado">Pintado Cor Escura</label>
+					<input type="radio" id="" name="portao_pintado" value="escuro">
+					<label for="cru">Sem Pintura</label>
+					<input type="radio" id="" name="portao_pintado" value="cru">
+				</p>
+            </div>
+            <br>
+			<p>
+				<label for=""> Quantidade Portas:</label>
+				<input type="checkbox" name="existem_portas" id="existem_portas" onclick="portas()">
+			</p>
+            <div id="estado_portas">
+				<input id="" type="number" name="" placeholder="">
+				<p>
+                <label for="pintado">Pintado</label>
+                    <input type="radio" id="pintado" name="pintado" value="pintado">
+				<label for="pintado">Pintado Cor Escura</label>
+					<input type="radio" id="" name="portao_pintado" value="escuro">
+                <label for="cru">Sem Pintura</label>
+                    <input type="radio" id="cru" name="pintado" value="cru">
+				</p>
+				<h4>Informe a medida da Porta:</h4>
+				<input id="" type="number" name="" placeholder="Largura em Centimetros">
+				<input id="" type="number" name="" placeholder="Altura em Centimetros">
+				<input id="" type="number" name="" placeholder="Espessura/Profundidade em Centimetros">
+            
+				<label for="mais_portas">Diferentes Medidas</label>
+				<input type="checkbox" name="mais_portas" id="mais_portas">
+            </div>
+			
+			<br>
+            <p>
+                <label for=""> Rodapé de Madeira:</label>
+                <input type="checkbox" name="existem_rodapes"  id="existem_rodapes" onclick="rodapes()">
+            </p>
+            <div id="estado_rodape">
+                <label for="qt_rodape">Quantidade:</label>
+                <input  type="number" id="qt_rodape" placeholder="informe a quantidade">
+                <p>
+                    <label for="pintado">Pintado</label>
+                        <input type="radio" id="pintado" name="pintado" value="pintado">
+                    <label for="pintado">Pintado Cor Escura</label>
+                        <input type="radio" id="" name="portao_pintado" value="escuro">
+                    <label for="cru">Sem Pintura</label>
+                        <input type="radio" id="cru" name="pintado" value="cru">
+                    </p>
+                <br>
+            </div>    
+                <input type="submit" value="Calcular">
+        
+            </form>
+        </section>
+        <section class="resultado-orcamento">
+            <h3>Orçamento:</h3>
+            <div class="baixo custo">
+                <h2>Baixo custo:</h2>
+				<p>
+				<table class="table-orcamento">
+                    <tr>
+    					<td>Produto:</td>
+   						<td>imagem:</td>
+   						<td>marca:</td>
+                      	<td>Preço/Un.:</td>
+                      	<td>Cobertura:</td>
+                      	<td>Quantidade:</td>
+                      	<td>Valor total:</td>
+ 					</tr>
+					<tr>
+						<td><label for="img-low">Selador</label></td><!--se não for necessario selador desaparecer selador display:none; -->
+   						<td><a href="https://www.leroymerlin.com.br/selador-acrilico-para-paredes-internas-e-externas-20l-luxens_88205754" target="_blank"><img id="img-low" class="img-tinta" src="https://cdn.leroymerlin.com.br/products/selador_acrilico_luxens_20l_88205754_0001_600x600.jpg"></a></td>
+   						<td>Luxens</td>
+                      	<td><?php echo $custo_selador_externo20l; ?> 169,90</td>
+                      	<td><?php echo $rendimento_selador_externo20l;?>200  m²</td>
+                      	<td><?php echo $selador_externo_usado;?></td>
+                      	<td><?php echo $custo_selador_externo_usados;?></td>
+					</tr>
+					<tr>
+						<td><label for="img-low">Tinta Externa Vedapren Parede Branco 18Kg</label></td>
+   						<td><a href="https://www.leroymerlin.com.br/vedapren-parede-branco-18kg-vedacit_90944833?store_code=39&gclid=CjwKCAjwgaeYBhBAEiwAvMgp2lD6WNLN_m_oBlmISwS_FCSXjqGd47T2OsFD0HU7Z_CXc02xJPb6ShoChvkQAvD_BwE" target="_blank"><img id="img-low" class="img-tinta" src="https://cdn.leroymerlin.com.br/products/vedacit_vedapren_parede_branco_lt_18_kg_90944833_9e12_600x600.jpeg"></a></td>
+   						<td>Vedacit</td>
+                      	<td><?php echo $custo_selador_externo20l; ?> R$ 299,90</td>
+                      	<td><?php echo $rendimento_selador_externo20l;?> 150m²</td>
+                      	<td><?php echo $selador_externo_usado;?></td>
+                      	<td><?php echo $custo_selador_externo_usados;?></td>
+					</tr>
+				</table>				
+                <table class="table-orcamento mao_de_obra">
+					<tr>
+						<td><label for="img-low">Mão de Obra</label></td>
+   						<td><a href="https://www.getninjas.com.br/reformas-e-reparos/pintor?utm_source=GoogleSearch&utm_medium=cpc&utm_campaign=16905701423&adGroupId=137213720322&feedItemId=&targetId=aud-1682408497084:kwd-297713854756&utm_term=b-valor%20de%20pintura%20por%20m2&utm_content=592924408989&matchtype=b&device=c&device_model=&network=g&gclid=CjwKCAjwpKyYBhB7EiwAU2Hn2Src8ilw87mQia3IBkTdRtRzPT0BEZHAKow4-gqAktyjdMj8CKuHQxoCES8QAvD_BwE" target="_blank"><img id="img-low" class="img-tinta" src="https://cyz.ind.br/wp-content/uploads/2019/08/pintor-cyz.jpg"></a></td>
+   						<td>frelancer</td>
+                      	<td><?php echo $custo_serviço_pintura_metro; ?> R$ 20,90 m²</td>
+                      	<td><?php echo $rendimento_selador_externo20l;?> R$ 300,00 /Dia</td>
+                      	<td><?php echo $selador_externo_usado;?> valor total</td>
+                      	<td><?php echo $custo_selador_externo_usados;?> entrar em contato:</td>
+					</tr>
+            </table>  
+				
+				</p>
+				<label for="img-low"></label><img id="img-low" src=""><?php ?>
+            </div>
+            <div class="alto-custo">
+                <h2>Alto Custo (Maior qualidade)</h2>
+                <label for="img-low"></label><img id="img-high" class="img-tinta" src=""><?php ?>
+                </div>
+			<table class="table-orcamento mao_de_obra">
+					<tr>
+						<td><label for="img-low">Mão de Obra</label></td>
+   						<td><a href="https://www.getninjas.com.br/reformas-e-reparos/pintor?utm_source=GoogleSearch&utm_medium=cpc&utm_campaign=16905701423&adGroupId=137213720322&feedItemId=&targetId=aud-1682408497084:kwd-297713854756&utm_term=b-valor%20de%20pintura%20por%20m2&utm_content=592924408989&matchtype=b&device=c&device_model=&network=g&gclid=CjwKCAjwpKyYBhB7EiwAU2Hn2Src8ilw87mQia3IBkTdRtRzPT0BEZHAKow4-gqAktyjdMj8CKuHQxoCES8QAvD_BwEhttps://www.getninjas.com.br/reformas-e-reparos" target="_blank"><img id="img-low" class="img-tinta" src="https://cyz.ind.br/wp-content/uploads/2019/08/pintor-cyz.jpg"></a></td>
+   						<td>frelancer</td>
+                      	<td><?php echo $custo_serviço_pintura_metro; ?> R$ 20,90 m²</td>
+                      	<td><?php echo $rendimento_selador_externo20l;?> 150m²</td>
+                      	<td><?php echo $selador_externo_usado;?> valor total</td>
+                      	<td><?php echo $custo_selador_externo_usados;?> entrar em contato:</td>
+					</tr>
+            </table>    			
+        </section>
+    </main>
+	
+</body>
+</html>

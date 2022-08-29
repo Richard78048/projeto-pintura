@@ -1,0 +1,61 @@
+body{
+    margin: 10vw;
+}
+.gradient-page{
+    background-color:slategray;
+    padding: 2vmax;
+}
+.gradient-page label{
+    display: flex;
+    flex-direction: column;
+}
+.gradient-page input{
+    display: flex;
+    flex-direction: column;
+}
+.gradient-page input[type='text'],input[type='number']{
+    width: 50vw;
+    display: block;
+    line-height: 2.5;
+}
+.gradient-page input[type='submit']{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    width: auto;
+    line-height: 2;
+    border-radius: 5px;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+}
+.resultado-orcamento{
+    background-color: black;
+    color: white;
+    padding: 2vmax;
+}
+.gradient-page p{
+    display: flex;
+    align-items: center;
+}
+.gradient-page p label{
+    margin-left: 2px;
+}
+#area_externa,#estado_portoes,#estado_portas,#estado_rodape{
+display:none;
+}
+input:invalid {
+border-bottom-color: red !important;
+}
+input:valid {
+border-bottom-color: green !important;
+}
+.img-tinta{
+width:5vw;
+}
+.table-orcamento, tr,td,tbody{
+border:2px solid white;
+}
+.valores_padroes{
+    display: none;
+}
