@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  --1: #2b2d42;
+  --2: #f8f9fa;
+
+  --background: #edf2f4;
+  --side-bar-background: #8d99ae;
+  --contrast: #ffd166;
+
+  --paragraph: "Roboto", sans-serif;
+  --title: "Merriweather", serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 25px 0;
+}
+@media (max-width: 600px) {
+  body {
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+    min-height: unset;
+    max-width: unset;
+    padding: 0;
+  }
+}
+main {
+  position: relative;
+  width: 700px;
+  max-width: 100%;
+  background-color: var(--background);
+  padding: 50px 150px 50px 50px;
+  border: 2px solid var(--1);
+  border-radius: 50px;
+}
+
+@media (max-width: 950px) {
+  main {
+    box-sizing: border-box;
+    width: 90vw;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    position: sticky;
+    width: 100vw;
+    max-width: 100%;
+    transform: none;
+    padding: 25px 90px 25px 25px;
+    border: 2px solid var(--1);
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}
+
+main .container {
+  padding-right: 50px;
+}
+
+main h2 {
+  font-family: var(--title);
+  margin-bottom: 25px;
+  color: var(--1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+main .input .inputs {
+  display: flex;
+  align-items: center;
+}
+
+main .input + .input {
+  margin-top: 25px;
+}
+
+main .input p {
+  color: var(--1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--paragraph);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+main .input input[type="number"] {
+  height: 24px;
+  width: 70%;
+  font-family: var(--paragraph);
+  font-size: 0.9rem;
+  border: 1px solid var(--1);
+  border-radius: 5px;
+  padding: 3px 5px 3px 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  main .input input[type="number"] {
+    width: 90%;
+  }
+}
+
+main .input input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  border: solid 1px var(--1);
+}
+input[type="checkbox"]:checked {
+  border: solid 1px var(--1);
+  background-color: var(--background);
+  color: red;
+}
+
+main #preco_total .tables {
+  display: flex;
+  justify-content: space-between;
+}
+
+main #preco_total > p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main #preco_total .table {
+  width: 45%;
+}
+
+main #preco_total .table p,
+main #preco_total > p {
+  color: var(--1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--paragraph);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main #preco_total .table p {
+  border-bottom: 1px solid var(--1);
+  padding: 10px 0;
+  white-space: normal;
+}
+
+main #preco_total .table p:first-child {
+  border-top: 1px solid var(--1);
+}
+
+nav {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  padding: 0 50px;
+  background-color: var(--side-bar-background);
+  height: 100%;
+  border: 2px solid var(--1);
+  border-radius: 0 50px 50px 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+    border-radius: 0;
+  }
+}
+
+nav ul {
+  margin-top: 50px;
+}
+
+nav ul li svg {
+  color: var(--background);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+nav ul li + li svg {
+  margin-top: 30px;
+}
+
+/* JS */
+
+main .container {
+  display: none;
+}
+
+main .container.active {
+  display: block;
+}
+
+nav ul li.active svg {
+  color: var(--contrast);
+}
