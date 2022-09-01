@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">	<html lang="pt-br">
+<head>	
+    <meta charset="UTF-8">	<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">	    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="global.css">	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="funcoes.js" type="text/javascript"></script>	    <title> Calculo Reforma </title>
+    <title>Orçamento Pintor</title>	    <link rel="stylesheet" href="./style.css">
+</head>	</head>
+<body>	
+    <main>	<body>
+        <section class="gradient-page">	    <main id="app">
+            <form method="POST" action="#" class="form-pintura">	        <div class="container active" id="informacoes_precos">
+				<h2> Bem Vindo Ao sistema de Orçamento de pintura para reformas!</h2>	            <h2> Preço e Informações dos Produtos </h2>
+				<label> Informe seu nome:</label>	            <form action="POST">
+					<input id="" type="text" name="nome" placeholder="Nome Completo" required>	                <div class="input">
+				<br>	                    <p>Preço Da Tinta De Concreto</p>
+				<label> Informe seu CPF:</label>	                    <div class="inputs">
+					<input id="" type="number" pattern="[0-9]+$" maxlength="11" name="" placeholder="Somente números" required>	                        <input type="number">
+				<br>	                        <input type="checkbox">
+                <hr>	                    </div>
+                <button onclick="alterapadroes()">Alterar Padrões</button>	                </div>
+                <div class="valores_padroes" id="valores_padroes">	                <div class="input">
+                    <h2>Valores Padrões:</h2>	                    <p>Tinta (Concreto) Gasta por M2</p>
+                    <form method="POST" action="#">	                    <div class="inputs">
+                        <label class="padroes">Selador Area Externa: </label>	                        <input type="number">
+                            <label> Valor:<input type="text" name="" placeholder="" width="10px"></label>	                        <input type="checkbox">
+                            <label> Cobertura:<input type="text" name="" placeholder=""></label>	                    </div>
+                            <label> Capacidade:<input type="text" name="" placeholder=""></label>	                </div>
+                            <label class="padroes">Tinta Externa</label>	                <div class="input">
+                            <input type="text" name="" placeholder="">	                    <p>Preço Da Tinta De Metal</p>
+                            <label class="padroes">Tinta Metal</label>	                    <div class="inputs">
+                            <input type="text" name="" placeholder="">	                        <input type="number">
+                            <label class="padroes">Tinta Madeira</label>	                        <input type="checkbox">
+                            <input type="text" name="" placeholder="">	                    </div>
+                            <label class="padroes">Mão de Obra(frelancer Get Ninjas)</label>	                </div>
+                            <input type="text" name="" placeholder="">	                <div class="input">
+                            <label class="padroes">Selador</label>	                    <p>Tinta (metal) Gasta por M2</p>
+                            <input type="text" name="" placeholder="">     	                    <div class="inputs">
+                            <label class="padroes">Selador</label>	                        <input type="number">
+                            <input type="text" name="" placeholder="">	                        <input type="checkbox">
+                            <label class="padroes">Selador</label>	                    </div>
+                            <input type="text" name="" placeholder="">	                </div>
+
+                <div class="input">
+
+                    <p>Preço tinta de madeira</p>
+                        <button name="alterar_padroes">Alterar</button>	                    <div class="inputs">
+                    </form>	                        <input type="number">
+                    <hr>	                        <input type="checkbox">
+                </div>    	                    </div>
+
+                </div>
+				<h4>Materiais:</h4>	                <div class="input">
+				<hr>	                    <p>Tinta (madeira) Gasta por M2</p>
+				<p>	                    <div class="inputs">
+					<label for=""> Pintura Externa:</label>	                        <input type="number">
+					<input type="checkbox" name="area_externa_ativa" id="area_externa_ativa" onclick="areaexterna()">	                        <input type="checkbox">
+				</p>		                    </div>
+					<div id="area_externa">	                </div>
+						<input type="text" name="area_externa" id="input_area_externa" placeholder="informe a Àrea em m²:"> 	                <div class="input">
+						<p>	                    <p>Tinta (madeira) Gasta por M2</p>
+							<label for="estado_externo">Pintado</label>	                    <div class="inputs">
+								<input type="radio" id="area_externa_radio" name="estado_externo" value="claro">	                        <input type="number">
+							<label for="pintado">Pintado Cor escura</label>	                        <input type="checkbox">
+								<input type="radio" id="" name="estado_externo" value="escuro">	                    </div>
+							<label for="cru">Crua</label>	                </div>
+								<input type="radio" id="" name="estado_externo" value="cru">	            </form>
+						</p>	        </div>
+					</div>			        <div class="container" id="informacoes_areas">
+            <br>	            <h2> Informações sobre as áres da reforma </h2>
+			<p>	            <form action="POST">
+				<label for=""> Quantidade Portões:</label>	                <div class="input">
+				<input type="checkbox" name="exitem_portoes" id="existem_portoes" onclick="portoes()">	                    <p>metro quadrado concreto</p>
+            </p>	                    <div class="inputs">
+			<div id="estado_portoes">	                        <input type="number">
+				<input id="quantidade_portoes" type="number" name="quantidade_portoes" placeholder="informe a quantidade :">	                        <input type="checkbox">
+				<p>              	                    </div>
+					<label for="portao_pintado">Pintado</label>	                </div>
+					<input type="radio" id="portao_pintado" name="portao_pintado" value="pintado">	                <div class="input">
+					<label for="pintado">Pintado Cor Escura</label>	                    <p>Quantidade de portas de madeira</p>
+					<input type="radio" id="" name="portao_pintado" value="escuro">	                    <div class="inputs">
+					<label for="cru">Sem Pintura</label>	                        <input type="number">
+					<input type="radio" id="" name="portao_pintado" value="cru">	                        <input type="checkbox">
+				</p>	                    </div>
+            </div>	                </div>
+            <br>	                <div class="input">
+			<p>	                    <p>M2 do rodapé (madeira)</p>
+				<label for=""> Quantidade Portas:</label>	                    <div class="inputs">
+				<input type="checkbox" name="existem_portas" id="existem_portas" onclick="portas()">	                        <input type="number">
+			</p>	                        <input type="checkbox">
+            <div id="estado_portas">	                    </div>
+				<input id="" type="number" name="" placeholder="">	                </div>
+				<p>	                <div class="input">
+                <label for="pintado">Pintado</label>	                    <p>Tinta (metal) Gasta por M2</p>
+                    <input type="radio" id="pintado" name="pintado" value="pintado">	                    <div class="inputs">
+				<label for="pintado">Pintado Cor Escura</label>	                        <input type="number">
+					<input type="radio" id="" name="portao_pintado" value="escuro">	                        <input type="checkbox">
+                <label for="cru">Sem Pintura</label>	                    </div>
+                    <input type="radio" id="cru" name="pintado" value="cru">	                </div>
+				</p>	                <div class="input">
+				<h4>Informe a medida da Porta:</h4>	                    <p>Metro quadrado ferro</p>
+				<input id="" type="number" name="" placeholder="Largura em Centimetros">	                    <div class="inputs">
+				<input id="" type="number" name="" placeholder="Altura em Centimetros">	                        <input type="number">
+				<input id="" type="number" name="" placeholder="Espessura/Profundidade em Centimetros">	                        <input type="checkbox">
+
+                    </div>
+				<label for="mais_portas">Diferentes Medidas</label>	                </div>
+				<input type="checkbox" name="mais_portas" id="mais_portas">	                <div class="input">
+            </div>	                    <p>quantidade de portoes</p>
+
+                    <div class="inputs">
+			<br>	                        <input type="number">
+            <p>	                        <input type="checkbox">
+                <label for=""> Rodapé de Madeira:</label>	                    </div>
+                <input type="checkbox" name="existem_rodapes"  id="existem_rodapes" onclick="rodapes()">	                </div>
+            </p>	                <div class="input">
+            <div id="estado_rodape">	                    <p>Metro quadrado cerca (madeira)</p>
+                <label for="qt_rodape">Quantidade:</label>	                    <div class="inputs">
+                <input  type="number" id="qt_rodape" placeholder="informe a quantidade">	                        <input type="number">
+                <p>	                        <input type="checkbox">
+                    <label for="pintado">Pintado</label>	                    </div>
+                        <input type="radio" id="pintado" name="pintado" value="pintado">	                </div>
+                    <label for="pintado">Pintado Cor Escura</label>	            </form>
+                        <input type="radio" id="" name="portao_pintado" value="escuro">	        </div>
+                    <label for="cru">Sem Pintura</label>	        <div class="container" id="quantidade_itens">
+                        <input type="radio" id="cru" name="pintado" value="cru">	            <h2> Quantidade total de itens </h2>
+                    </p>	            <form action="POST">
+                <br>	                <div class="input">
+            </div>    	                    <p>tinta de concreto</p>
+                <input type="submit" value="Calcular">	                    <div class="inputs">
+
+                        <input type="number">
+            </form>	                        <input type="checkbox">
+        </section>	                    </div>
+        <section class="resultado-orcamento">	                </div>
+            <h3>Orçamento:</h3>	                <div class="input">
+            <div class="baixo custo">	                    <p>tinta de metal</p>
+                <h2>Baixo custo:</h2>	                    <div class="inputs">
+				<p>	                        <input type="number">
+				<table class="table-orcamento">	                        <input type="checkbox">
+                    <tr>	                    </div>
+    					<td>Produto:</td>	                </div>
+   						<td>imagem:</td>	                <div class="input">
+   						<td>marca:</td>	                    <p>tinta de madeira</p>
+                      	<td>Preço/Un.:</td>	                    <div class="inputs">
+                      	<td>Cobertura:</td>	                        <input type="number">
+                      	<td>Quantidade:</td>	                        <input type="checkbox">
+                      	<td>Valor total:</td>	                    </div>
+ 					</tr>	                </div>
+					<tr>	                <div class="input">
+						<td><label for="img-low">Selador</label></td><!--se não for necessario selador desaparecer selador display:none; -->	                    <p>fitas</p>
+   						<td><a href="https://www.leroymerlin.com.br/selador-acrilico-para-paredes-internas-e-externas-20l-luxens_88205754" target="_blank"><img id="img-low" class="img-tinta" src="https://cdn.leroymerlin.com.br/products/selador_acrilico_luxens_20l_88205754_0001_600x600.jpg"></a></td>	                    <div class="inputs">
+   						<td>Luxens</td>	                        <input type="number">
+                      	<td><?php echo $custo_selador_externo20l; ?> 169,90</td>	                        <input type="checkbox">
+                      	<td><?php echo $rendimento_selador_externo20l;?>200  m²</td>	                    </div>
+                      	<td><?php echo $selador_externo_usado;?></td>	                </div>
+                      	<td><?php echo $custo_selador_externo_usados;?></td>	                <div class="input">
+					</tr>	                    <p>pincel</p>
+					<tr>	                    <div class="inputs">
+						<td><label for="img-low">Tinta Externa Vedapren Parede Branco 18Kg</label></td>	                        <input type="number">
+   						<td><a href="https://www.leroymerlin.com.br/vedapren-parede-branco-18kg-vedacit_90944833?store_code=39&gclid=CjwKCAjwgaeYBhBAEiwAvMgp2lD6WNLN_m_oBlmISwS_FCSXjqGd47T2OsFD0HU7Z_CXc02xJPb6ShoChvkQAvD_BwE" target="_blank"><img id="img-low" class="img-tinta" src="https://cdn.leroymerlin.com.br/products/vedacit_vedapren_parede_branco_lt_18_kg_90944833_9e12_600x600.jpeg"></a></td>	                        <input type="checkbox">
+   						<td>Vedacit</td>	                    </div>
+                      	<td><?php echo $custo_selador_externo20l; ?> R$ 299,90</td>	                </div>
+                      	<td><?php echo $rendimento_selador_externo20l;?> 150m²</td>	                <div class="input">
+                      	<td><?php echo $selador_externo_usado;?></td>	                    <p>rolo</p>
+                      	<td><?php echo $custo_selador_externo_usados;?></td>	                    <div class="inputs">
+					</tr>	                        <input type="number">
+				</table>					                        <input type="checkbox">
+                <table class="table-orcamento mao_de_obra">	                    </div>
+					<tr>	                </div>
+						<td><label for="img-low">Mão de Obra</label></td>	                <div class="input">
+   						<td><a href="https://www.getninjas.com.br/reformas-e-reparos/pintor?utm_source=GoogleSearch&utm_medium=cpc&utm_campaign=16905701423&adGroupId=137213720322&feedItemId=&targetId=aud-1682408497084:kwd-297713854756&utm_term=b-valor%20de%20pintura%20por%20m2&utm_content=592924408989&matchtype=b&device=c&device_model=&network=g&gclid=CjwKCAjwpKyYBhB7EiwAU2Hn2Src8ilw87mQia3IBkTdRtRzPT0BEZHAKow4-gqAktyjdMj8CKuHQxoCES8QAvD_BwE" target="_blank"><img id="img-low" class="img-tinta" src="https://cyz.ind.br/wp-content/uploads/2019/08/pintor-cyz.jpg"></a></td>	                    <p>lixa</p>
+   						<td>frelancer</td>	                    <div class="inputs">
+                      	<td><?php echo $custo_serviço_pintura_metro; ?> R$ 20,90 m²</td>	                        <input type="number">
+                      	<td><?php echo $rendimento_selador_externo20l;?> R$ 300,00 /Dia</td>	                        <input type="checkbox">
+                      	<td><?php echo $selador_externo_usado;?> valor total</td>	                    </div>
+                      	<td><?php echo $custo_selador_externo_usados;?> entrar em contato:</td>	                </div>
+					</tr>	            </form>
+            </table>  	        </div>
+
+        <div class="container" id="preco_total">
+				</p>	            <h2> Preço total dos produtos </h2>
+				<label for="img-low"></label><img id="img-low" src=""><?php ?>	            <div class="tables">
+            </div>	                <div class="table">
+            <div class="alto-custo">	                    <p>Tinta madeira: R$200,00</p>
+                <h2>Alto Custo (Maior qualidade)</h2>	                    <p>Tinta ferro: R$200,00</p>
+                <label for="img-low"></label><img id="img-high" class="img-tinta" src=""><?php ?>	                    <p>Tinta concreto: R$200,00</p>
+                </div>	                    <p>fita: R$200,00</p>
+			<table class="table-orcamento mao_de_obra">	                    <p>rolo: R$200,00</p>
+					<tr>	                </div>
+						<td><label for="img-low">Mão de Obra</label></td>	                <div class="table">
+   						<td><a href="https://www.getninjas.com.br/reformas-e-reparos/pintor?utm_source=GoogleSearch&utm_medium=cpc&utm_campaign=16905701423&adGroupId=137213720322&feedItemId=&targetId=aud-1682408497084:kwd-297713854756&utm_term=b-valor%20de%20pintura%20por%20m2&utm_content=592924408989&matchtype=b&device=c&device_model=&network=g&gclid=CjwKCAjwpKyYBhB7EiwAU2Hn2Src8ilw87mQia3IBkTdRtRzPT0BEZHAKow4-gqAktyjdMj8CKuHQxoCES8QAvD_BwEhttps://www.getninjas.com.br/reformas-e-reparos" target="_blank"><img id="img-low" class="img-tinta" src="https://cyz.ind.br/wp-content/uploads/2019/08/pintor-cyz.jpg"></a></td>	                    <p>pincel: R$200,00</p>
+   						<td>frelancer</td>	                    <p>lixa: R$200,00</p>
+                      	<td><?php echo $custo_serviço_pintura_metro; ?> R$ 20,90 m²</td>	                    <p>jornal: R$200,00</p>
+                      	<td><?php echo $rendimento_selador_externo20l;?> 150m²</td>	                    <p>fita: R$200,00</p>
+                      	<td><?php echo $selador_externo_usado;?> valor total</td>	                    <p>rolo: R$200,00</p>
+                      	<td><?php echo $custo_selador_externo_usados;?> entrar em contato:</td>	                </div>
+					</tr>	            </div>
+            </table>    				            <p>Total: R$2000,00</p>
+        </section>	        </div>
+    </main>	        <nav>
+
+            <ul>
+</body>	                <li class="active" alt="Preço e Informações dos Produtos"
+                    onclick="toggleActive(informacoes_precos,this)">
+                    <svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M22.55 38.35H25.3V35.75C27.3333 35.5167 28.9167 34.8917 30.05 33.875C31.1833 32.8583 31.75 31.5 31.75 29.8C31.75 28.1 31.2667 26.7167 30.3 25.65C29.3333 24.5833 27.7 23.5667 25.4 22.6C23.4667 21.8 22.0667 21.0833 21.2 20.45C20.3333 19.8167 19.9 18.9667 19.9 17.9C19.9 16.8667 20.275 16.05 21.025 15.45C21.775 14.85 22.8 14.55 24.1 14.55C25.1 14.55 25.9667 14.7833 26.7 15.25C27.4333 15.7167 28.05 16.4167 28.55 17.35L30.95 16.2C30.3833 15.0333 29.6333 14.1167 28.7 13.45C27.7667 12.7833 26.6667 12.3833 25.4 12.25V9.7H22.65V12.25C20.95 12.4833 19.6083 13.1083 18.625 14.125C17.6417 15.1417 17.15 16.4 17.15 17.9C17.15 19.5333 17.65 20.8333 18.65 21.8C19.65 22.7667 21.15 23.6667 23.15 24.5C25.3833 25.4333 26.9167 26.275 27.75 27.025C28.5833 27.775 29 28.7 29 29.8C29 30.8667 28.5583 31.725 27.675 32.375C26.7917 33.025 25.6833 33.35 24.35 33.35C23.05 33.35 21.8917 32.9833 20.875 32.25C19.8583 31.5167 19.15 30.5167 18.75 29.25L16.2 30.1C16.9 31.6333 17.7583 32.8417 18.775 33.725C19.7917 34.6083 21.05 35.25 22.55 35.65V38.35ZM24 44C21.2667 44 18.6833 43.475 16.25 42.425C13.8167 41.375 11.6917 39.9417 9.875 38.125C8.05833 36.3083 6.625 34.1833 5.575 31.75C4.525 29.3167 4 26.7333 4 24C4 21.2333 4.525 18.6333 5.575 16.2C6.625 13.7667 8.05833 11.65 9.875 9.85C11.6917 8.05 13.8167 6.625 16.25 5.575C18.6833 4.525 21.2667 4 24 4C26.7667 4 29.3667 4.525 31.8 5.575C34.2333 6.625 36.35 8.05 38.15 9.85C39.95 11.65 41.375 13.7667 42.425 16.2C43.475 18.6333 44 21.2333 44 24C44 26.7333 43.475 29.3167 42.425 31.75C41.375 34.1833 39.95 36.3083 38.15 38.125C36.35 39.9417 34.2333 41.375 31.8 42.425C29.3667 43.475 26.7667 44 24 44ZM24 41C28.7333 41 32.75 39.3417 36.05 36.025C39.35 32.7083 41 28.7 41 24C41 19.2667 39.35 15.25 36.05 11.95C32.75 8.65 28.7333 7 24 7C19.3 7 15.2917 8.65 11.975 11.95C8.65833 15.25 7 19.2667 7 24C7 28.7 8.65833 32.7083 11.975 36.025C15.2917 39.3417 19.3 41 24 41Z"
+                            fill="currentcolor" />
+
+                    </svg>
+
+                </li>
+                <li alt="Áreas da reforma" onclick="toggleActive(informacoes_areas, this)">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10 40V33.5H6V30.5H10V24H4L24 6L44 24H38V30.5H42V33.5H38V40H35V33.5H25.5V40H22.5V33.5H13V40H10ZM13 30.5H22.5V11.4L13 19.9V30.5ZM25.5 30.5H35V19.9L25.5 11.4V30.5Z"
+                            fill="currentcolor" />
+                    </svg>
+                </li>
+                <li alt="Quantidade total de Itens" onclick="toggleActive(quantidade_itens, this)">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M38.2 43.95C38 43.95 37.8167 43.925 37.65 43.875C37.4833 43.825 37.3167 43.7167 37.15 43.55L25.9 32.3V28.5L28.45 25.95H32.25L43.5 37.2C43.6667 37.3667 43.775 37.5333 43.825 37.7C43.875 37.8667 43.9 38.05 43.9 38.25C43.9 38.45 43.875 38.6333 43.825 38.8C43.775 38.9667 43.6667 39.1333 43.5 39.3L39.25 43.55C39.0833 43.7167 38.9167 43.825 38.75 43.875C38.5833 43.925 38.4 43.95 38.2 43.95ZM38.2 40.4L40.35 38.25L30.35 28.25L28.2 30.4L38.2 40.4ZM9.75 44C9.55 44 9.35833 43.9667 9.175 43.9C8.99167 43.8333 8.81667 43.7167 8.65 43.55L4.45 39.35C4.28333 39.1833 4.16667 39.0083 4.1 38.825C4.03333 38.6417 4 38.45 4 38.25C4 38.05 4.03333 37.8667 4.1 37.7C4.16667 37.5333 4.28333 37.3667 4.45 37.2L15.7 25.95H19.95L21.85 24.05L13.1 15.3H10.25L4 9.05L8.95 4.1L15.2 10.35V13.2L23.95 21.95L30.45 15.45L27.1 12.1L29.9 9.3H24.25L23.35 8.4L29.75 2L30.65 2.9V8.55L33.45 5.75L41.9 14.2C42.4 14.7 42.7917 15.275 43.075 15.925C43.3583 16.575 43.5 17.2667 43.5 18C43.5 18.6333 43.4 19.2583 43.2 19.875C43 20.4917 42.6833 21.0667 42.25 21.6L38 17.35L35.2 20.15L32.6 17.55L22.05 28.1V32.3L10.8 43.55C10.6333 43.7167 10.4667 43.8333 10.3 43.9C10.1333 43.9667 9.95 44 9.75 44ZM9.75 40.4L19.75 30.4L17.6 28.25L7.6 38.25L9.75 40.4Z"
+                            fill="currentcolor" />
+                    </svg>
+                </li>
+                <li alt="Preço total dos produtos" onclick="toggleActive(preco_total, this)">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M13.5 29.9V27.65H8V24.65H19V19.4H9.55C9.15 19.4 8.79167 19.25 8.475 18.95C8.15833 18.65 8 18.2833 8 17.85V9.64999C8 9.21666 8.15 8.85833 8.45 8.57499C8.75 8.29166 9.1 8.14999 9.5 8.14999H13.5V5.89999H16.5V8.14999H22V11.15H11V16.4H20.45C20.8833 16.4 21.25 16.5417 21.55 16.825C21.85 17.1083 22 17.4833 22 17.95V26.15C22 26.55 21.8583 26.9 21.575 27.2C21.2917 27.5 20.9333 27.65 20.5 27.65H16.5V29.9H13.5ZM27.9 41.9L19.4 33.4L21.5 31.3L27.9 37.7L39.9 25.7L42 27.8L27.9 41.9Z"
+                            fill="currentcolor" />
+                    </svg>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+
+</html> 	</html> 
+ 16  
+script.js
+Viewed
+@@ -0,0 +1,16 @@
+containers = document.querySelectorAll(".container");
+svgs = document.querySelectorAll("nav ul li");
+
+console.log(svgs);
+function toggleActive(i, x) {
+  removeClass(containers);
+  removeClass(svgs);
+  i.classList.add("active");
+  x.classList.add("active");
+}
+
+function removeClass(i) {
+  i.forEach((e) => {
+    e.classList.remove("active");
+  });
+}
+ 209  
+style.css
+Viewed
+@@ -0,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  --1: #2b2d42;
+  --2: #f8f9fa;
+
+  --background: #edf2f4;
+  --side-bar-background: #8d99ae;
+  --contrast: #ffd166;
+
+  --paragraph: "Roboto", sans-serif;
+  --title: "Merriweather", serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 100vw;
+  padding: 25px 0;
+}
+@media (max-width: 600px) {
+  body {
+    display: block;
+    align-items: unset;
+    justify-content: unset;
+    min-height: unset;
+    max-width: unset;
+    padding: 0;
+  }
+}
+main {
+  position: relative;
+  width: 700px;
+  max-width: 100%;
+  background-color: var(--background);
+  padding: 50px 150px 50px 50px;
+  border: 2px solid var(--1);
+  border-radius: 50px;
+}
+
+@media (max-width: 950px) {
+  main {
+    box-sizing: border-box;
+    width: 90vw;
+  }
+}
+@media (max-width: 600px) {
+  main {
+    position: sticky;
+    width: 100vw;
+    max-width: 100%;
+    transform: none;
+    padding: 25px 90px 25px 25px;
+    border: 2px solid var(--1);
+    border-radius: 0;
+    min-height: 100vh;
+  }
+}
+
+main .container {
+  padding-right: 50px;
+}
+
+main h2 {
+  font-family: var(--title);
+  margin-bottom: 25px;
+  color: var(--1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+main .input .inputs {
+  display: flex;
+  align-items: center;
+}
+
+main .input + .input {
+  margin-top: 25px;
+}
+
+main .input p {
+  color: var(--1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--paragraph);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+}
+
+main .input input[type="number"] {
+  height: 24px;
+  width: 70%;
+  font-family: var(--paragraph);
+  font-size: 0.9rem;
+  border: 1px solid var(--1);
+  border-radius: 5px;
+  padding: 3px 5px 3px 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  main .input input[type="number"] {
+    width: 90%;
+  }
+}
+
+main .input input[type="checkbox"] {
+  height: 15px;
+  width: 15px;
+  border: solid 1px var(--1);
+}
+input[type="checkbox"]:checked {
+  border: solid 1px var(--1);
+  background-color: var(--background);
+  color: red;
+}
+
+main #preco_total .tables {
+  display: flex;
+  justify-content: space-between;
+}
+
+main #preco_total > p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+main #preco_total .table {
+  width: 45%;
+}
+
+main #preco_total .table p,
+main #preco_total > p {
+  color: var(--1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--paragraph);
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+main #preco_total .table p {
+  border-bottom: 1px solid var(--1);
+  padding: 10px 0;
+  white-space: normal;
+}
+
+main #preco_total .table p:first-child {
+  border-top: 1px solid var(--1);
+}
+
+nav {
+  position: absolute;
+  right: -2px;
+  top: -2px;
+  padding: 0 50px;
+  background-color: var(--side-bar-background);
+  height: 100%;
+  border: 2px solid var(--1);
+  border-radius: 0 50px 50px 0;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 20px;
+    border-radius: 0;
+  }
+}
+
+nav ul {
+  margin-top: 50px;
+}
+
+nav ul li svg {
+  color: var(--background);
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+nav ul li + li svg {
+  margin-top: 30px;
+}
+
+/* JS */
+
+main .container {
+  display: none;
+}
+
+main .container.active {
+  display: block;
+}
+
+nav ul li.active svg {
+  color: var(--contrast);
+}
